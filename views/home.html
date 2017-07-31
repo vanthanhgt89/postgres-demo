@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{% include  'components/head.html' %}
+</head>
+<body>
+  {% include 'components/header.html'%}
+
+  {% block content%}
+  <div class="row">
+  <form class="col s12" action="/" method="post">
+    <div class="input-field col s6">
+      <input  id="name" type="text" class="validate" name="name">
+      <label class="active" for="name">Name</label>
+     
+    </div>
+    <div class="input-field col s6">
+      <input  id="password" type="password" class="validate" name="password">
+      <label class="active" for="password">Password</label>
+     
+    </div>
+    <button class="waves-effect waves-light" type="submit">Submit</button>
+   
+    </form>
+    
+  </div>
+  {% endblock%}
+  {% include 'components/footer.html'%}
+  {% include 'components/script.html'%}
+</body>
+</html>
