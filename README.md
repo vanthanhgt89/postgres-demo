@@ -50,7 +50,7 @@ const options = {
 };
 const pgp = require('pg-promise')(options);
 ```
-* Cài đặt địa chỉ cho pgq --> có thể là chuỗi string hoặc một object
+* Cài đặt địa chỉ cho pgq --> có thể là chuỗi string hoặc một object
 ```js
 const cn = 'postgres://username:password@host:port/database';
 const cn = {
@@ -63,7 +63,7 @@ const cn = {
 module.exports.db = pgp(cn);
 module.exports.config = config
 ```
-* Xong phần kết nối, sử dụng chỉ cần require('./pgg)
+* Xong phần kết nối, sử dụng chỉ cần require('./pgg)
 * Sử dụng thêm module monitor quan sát khi có lỗi
 
 ```js
@@ -76,7 +76,7 @@ monitor.setTheme('bright');
 ### Các câu lệnh kết nối đơn giản
 #### Lệnh select 
 ```js
-db.any('select * from table_name limit 3')
+db.any('select * from table_name limit 3')
 .then(data => {
   console.log(data)
 })
